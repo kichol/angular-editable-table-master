@@ -2,7 +2,7 @@ export interface Product {
     productId: string,
     code: string,
     name: string,
-    price: number,
+    price: string,
     isSelected: boolean,
     isEdit: boolean;
 }
@@ -12,12 +12,7 @@ export interface Product {
       type: 'isSelected',
       label: '',
     },
-    // {
-    //     key: 'productId',
-    //     type: 'text',
-    //     label: 'ProductId',
-    //     required: true
-    // },
+
     {
       key: 'code',
       type: 'text',
@@ -32,10 +27,10 @@ export interface Product {
     },
     {
       key: 'price',
-      type: 'number',
+      type: 'string',
       label: 'Price',
       required: true,
-    //   pattern: '/^(?:\d*\.\d{1,2}|\d+)$/)]',
+      pattern: "/^(?:\d*\.\d{1,2}|\d+)$/)]"
     },
     
     {

@@ -27,7 +27,6 @@ export class AppComponent {
   editRow(row: Product) {
     if (row.productId === '') {
       this.productService.addProduct(row).subscribe((newProduct: Product) => {
-        console.log(newProduct);
         row.productId = newProduct.productId
         row.isEdit = false
       })
@@ -41,7 +40,7 @@ export class AppComponent {
       productId: '',
       name: '',
       code: '',
-      price: 0,
+      price:  '',
       isEdit: true,
       isSelected: false,
     }
